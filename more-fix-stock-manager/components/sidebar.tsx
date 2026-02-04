@@ -1,7 +1,8 @@
 "use client"
 
 import Link from "next/link"
-import { usePathname } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
+import { useAuth } from "@/lib/auth-context"
 import { cn } from "@/lib/utils"
 import {
   LayoutDashboard,
@@ -11,6 +12,7 @@ import {
   MessageSquare,
   Menu,
   X,
+  LogOut,
 } from "lucide-react"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
@@ -25,7 +27,14 @@ const navItems = [
 
 export function Sidebar() {
   const pathname = usePathname()
+  const router = useRouter()
   const [mobileOpen, setMobileOpen] = useState(false)
+  const { logout, state } = useAuth()
+
+  const handleLogout = () => {
+    logout()
+    router.push("/login")
+  }
 
   return (
     <>
@@ -85,6 +94,24 @@ export function Sidebar() {
               )
             })}
           </nav>
+
+          {/* User Info and Logout */}
+          <div className="border-t border-sidebar-border p-4 space-y-4">
+            {state.user && (
+              <div className="p-3 rounded-lg bg-sidebar-accent">
+                <p className="text-xs text-sidebar-foreground/70">Connecté en tant que</p>
+                <p className="text-sm font-semibold text-sidebar-foreground">{state.user.email}</p>
+              </div>
+            )}
+            <Button
+              variant="outline"
+              className="w-full justify-start gap-2"
+              onClick={handleLogout}
+            >
+              <LogOut className="h-4 w-4" />
+              Déconnexion
+            </Button>
+          </div>
 
           {/* Footer */}
           <div className="border-t border-sidebar-border p-4">

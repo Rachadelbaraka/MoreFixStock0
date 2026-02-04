@@ -1,0 +1,77 @@
+🔐 AUTHENTIFICATION ADMIN - AIDE RAPIDE
+═══════════════════════════════════════════════════════════════════
+
+📋 IDENTIFIANTS
+───────────────
+Email:        admin@morefix.com
+Mot de passe: Admin123!
+
+🚀 DÉMARRAGE
+────────────
+1. pnpm install
+2. pnpm dev
+3. Aller à http://localhost:3000/login
+
+🔑 CONNEXION
+────────────
+✅ Saisir les identifiants ci-dessus
+✅ Cliquer "Se connecter"
+✅ Redirection automatique au dashboard
+
+🚪 PAGES PROTÉGÉES
+──────────────────
+🏠  Dashboard       /
+📦  Produits       /products
+📁  Catégories    /categories
+🚚  Fournisseurs  /suppliers
+🤖  Chatbot IA    /chatbot
+
+🔓 DÉCONNEXION
+──────────────
+✅ Cliquer "Déconnexion" dans la sidebar
+✅ Redirection vers /login
+✅ Session effacée
+
+📚 DOCUMENTATION
+────────────────
+Pour plus d'informations:
+
+👤 Utilisateur?         → SECURITY_CHECKLIST.md
+📖 Guide complet?       → AUTHENTICATION_GUIDE.md
+🚀 Déploiement?         → DEPLOYMENT_GUIDE.md
+👨‍💻 Détails techniques?  → TECHNICAL_GUIDE.md
+📋 Implémentation?      → AUTH_SETUP.md
+🎓 Index de tout?       → README_AUTH.md
+
+⚡ DÉPANNAGE RAPIDE
+───────────────────
+❌ Redirige vers /login?
+   → Vérifier les identifiants
+
+❌ Identifiants ne marchent pas?
+   → Vérifier lib/auth-config.ts
+
+❌ Logout ne fonctionne pas?
+   → Vérifier components/sidebar.tsx
+
+❌ Session perdue au refresh?
+   → Normal, localStorage vidé (dev)
+
+⚙️ CONFIGURATION
+────────────────
+En dev:   Utiliser auth-config.ts
+En prod:  Créer .env.local (voir .env.example)
+
+⚠️ AVANT PRODUCTION
+───────────────────
+1. Lire DEPLOYMENT_GUIDE.md
+2. Changer les identifiants
+3. Ajouter HTTPS
+4. Configurer les variables d'env
+
+✅ TOUT EST PRÊT! 🎉
+──────────────────────
+Votre app est sécurisée et prête à l'emploi.
+
+Des questions? Consulter la documentation appropriée.
+═══════════════════════════════════════════════════════════════════

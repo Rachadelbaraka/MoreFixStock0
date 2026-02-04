@@ -1,10 +1,13 @@
 import { AppShell } from "@/components/app-shell"
 import { Chatbot } from "@/components/chatbot"
+import { ProtectedRoute } from "@/components/protected-route"
 
 export default function ChatbotPage() {
   return (
-    <AppShell>
-      <Chatbot />
-    </AppShell>
+    <ProtectedRoute>
+      <AppShell>
+        <Chatbot />
+      </AppShell>
+    </ProtectedRoute>
   )
 }
