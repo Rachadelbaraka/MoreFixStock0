@@ -10,8 +10,8 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'MoreFix - Gestion de Stock',
-  description: 'Application de gestion de stock pour magasin informatique',
-  generator: 'v0.app',
+  description: 'Application de gestion de stock pour magasin informatique | Créée par Rachad',
+  creator: 'Rachad',
   icons: {
     icon: [
       {

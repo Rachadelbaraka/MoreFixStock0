@@ -11,8 +11,8 @@
 export const AUTH_CONFIG = {
   // Identifiants admin (DEMO UNIQUEMENT)
   admin: {
-    email: process.env.NEXT_PUBLIC_ADMIN_EMAIL || "admin@morefix.com",
-    password: process.env.NEXT_PUBLIC_ADMIN_PASSWORD || "Admin123!",
+    email: process.env.NEXT_PUBLIC_ADMIN_EMAIL || "admin",
+    password: process.env.NEXT_PUBLIC_ADMIN_PASSWORD || "MoreFix$/54543554145",
   },
 
   // Configuration de session

@@ -64,8 +64,8 @@ export default function LoginPage() {
               <Label htmlFor="email">Email</Label>
               <Input
                 id="email"
-                type="email"
-                placeholder="admin@morefix.com"
+                type="text"
+                placeholder="admin"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={isLoading}
@@ -98,10 +98,10 @@ export default function LoginPage() {
           <div className="mt-6 p-4 bg-slate-50 dark:bg-slate-900 rounded-lg border">
             <p className="text-sm font-semibold mb-2">Identifiants de démonstration :</p>
             <p className="text-xs text-slate-600 dark:text-slate-400">
-              <strong>Email :</strong> admin@morefix.com
+              <strong>Email :</strong> admin
             </p>
             <p className="text-xs text-slate-600 dark:text-slate-400">
-              <strong>Mot de passe :</strong> Admin123!
+              <strong>Mot de passe :</strong> MoreFix$/54543554145
             </p>
           </div>
         </CardContent>
